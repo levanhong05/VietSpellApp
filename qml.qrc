@@ -2,7 +2,20 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>scripts/setting.js</file>
-        <file>scripts/math.js</file>
         <file>theme/AppTheme.qml</file>
+        <file>menu/LeftPanelButton.qml</file>
+        <file>menu/LeftPanelItem.qml</file>
+        <file>menu/SettingMenu.qml</file>
+        <file>navigation/DrawerBottomNavigationBar.qml</file>
+        <file>navigation/DrawerBottomNavigationButton.qml</file>
+        <file>navigation/DrawerDivider.qml</file>
+        <file>navigation/DrawerNavigationBar.qml</file>
+        <file>navigation/DrawerNavigationButton.qml</file>
+        <file>navigation/DrawerNavigationTextButton.qml</file>
+        <file>sections/HeaderSection.qml</file>
+        <file>sections/TitleSection.qml</file>
+        <file>scripts/branding.js</file>
+        <file>scripts/global.js</file>
+        <file>scripts/maths.js</file>
     </qresource>
 </RCC>

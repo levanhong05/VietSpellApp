@@ -18,6 +18,31 @@ modification, are permitted provided that the following conditions are met:
 **
 ****************************************************************************/
 
-.pragma library
+#ifndef TRANSLATION_H
+#define TRANSLATION_H
 
-var language = "en_US"
+#include <QObject>
+#include <QTranslator>
+
+class Translation : public QObject
+{
+    Q_OBJECT
+
+     Q_PROPERTY(QString tr READ getEmptyString NOTIFY languageChanged)
+
+public:
+    explicit Translation(QObject *parent = 0);
+
+    QString getEmptyString();
+
+    Q_INVOKABLE void selectLanguage(QString language);
+
+signals:
+    void languageChanged();
+
+private:
+    QTranslator *_viTranslator;
+
+};
+
+#endif // TRANSLATION_H

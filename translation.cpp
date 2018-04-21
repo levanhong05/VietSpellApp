@@ -18,6 +18,32 @@ modification, are permitted provided that the following conditions are met:
 **
 ****************************************************************************/
 
-.pragma library
+#include "translation.h"
 
-var language = "en_US"
+#include <QApplication>
+
+Translation::Translation(QObject *parent) :
+    QObject(parent)
+{
+    _viTranslator = new QTranslator(this);
+}
+
+QString Translation::getEmptyString()
+{
+    return "";
+}
+
+void Translation::selectLanguage(QString language)
+{
+    if (language == QString("vi_VN")) { //Vietnamese
+        _viTranslator->load(":/spellteach/translation/qml_vi.qm");
+
+        qApp->installTranslator(_viTranslator);
+    }
+
+    if (language == QString("en_US")){ //English
+        qApp->removeTranslator(_viTranslator);
+    }
+
+    emit languageChanged();
+}

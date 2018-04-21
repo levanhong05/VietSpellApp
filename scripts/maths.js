@@ -20,4 +20,7 @@ modification, are permitted provided that the following conditions are met:
 
 .pragma library
 
-var language = "en_US"
+function round(d, n)
+{
+    return Math.floor(d * Math.pow(10.0, n) + 0.5) / Math.pow(10.0, n)
+}

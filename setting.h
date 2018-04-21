@@ -18,6 +18,23 @@ modification, are permitted provided that the following conditions are met:
 **
 ****************************************************************************/
 
-.pragma library
+#ifndef SETTINGS_H
+#define SETTINGS_H
 
-var language = "en_US"
+#include <QObject>
+
+class Setting : public QObject
+{
+    Q_OBJECT
+
+public:
+    explicit Setting(QObject *parent = 0);
+
+    Q_INVOKABLE QString read(QString key, QString group = "Components");
+
+    Q_INVOKABLE QStringList readAllGroup(QString group = "Components");
+
+    Q_INVOKABLE void write(QString key, QString value, QString group = "Components");
+};
+
+#endif // SETTINGS_H

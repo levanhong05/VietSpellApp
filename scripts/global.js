@@ -20,4 +20,10 @@ modification, are permitted provided that the following conditions are met:
 
 .pragma library
 
-var language = "en_US"
+var HomeIndex = 0;
+var ComponentIndex = 1;
+var DispositionIndex = 2;
+var LocationIndex = 3;
+var MechanicIndex = 4;
+var ResultIndex = 5;
+var SettingIndex = 6;

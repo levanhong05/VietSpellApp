@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/">
+    <qresource prefix="/spellteach">
         <file>images/mute.png</file>
         <file>images/speaker_high.png</file>
         <file>images/speaker_low.png</file>

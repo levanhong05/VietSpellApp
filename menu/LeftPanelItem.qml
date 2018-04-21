@@ -18,6 +18,16 @@ modification, are permitted provided that the following conditions are met:
 **
 ****************************************************************************/
 
-.pragma library
+import QtQuick 2.10
+import QtQuick.Layouts 1.3
+import QtQuick.Controls 2.3
 
-var language = "en_US"
+ItemDelegate {
+    // vertical spacer item
+    Layout.fillHeight: true
+
+    Rectangle {
+        anchors.fill: parent
+        color: "transparent"
+    } // to visualize the spacer
+}
